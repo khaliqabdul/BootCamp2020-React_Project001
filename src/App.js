@@ -1,22 +1,31 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
 
-function App() {
+function App(props) {
+
+//const activity = props.activity
+const {activity} = props            // destructuring
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h2>Hello! <strong>{activity.name}</strong> </h2>
+        <p>This is "{activity.assignment}" Assignment</p>
+        <div className="assignment">
+          <h1>This is h1 tag</h1>
+          <ol>
+            <li>JS inside JSX</li>
+            <li>
+              <ul>
+                <li>5 + 5 = {5 + 5}</li>
+                <li>5 - 5 = {5 -5}</li>
+                <li>5 * 5 = {5 * 5}</li>
+                <li>5 / 5 = {5 / 5}</li>
+              </ul>
+            </li>
+            <li>Ordered List</li>
+          </ol>
+        </div>
       </header>
     </div>
   );
